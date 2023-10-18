@@ -1,0 +1,83 @@
+:root {
+  --main-primary-background-color: #fafbfe;
+  --header-height: 50px;
+}
+
+body {
+  background-color: var(--main-primary-background-color);
+}
+
+.page {
+  padding: 16px;
+  &.nopadding {
+    padding: 0;
+  }
+}
+
+/* 新增/编辑表单*/
+.nil-dialog {
+  min-width: calc((100vw / 2) - 50px);
+  overflow: hidden;
+  --n-border-radius: 8px;
+}
+.nil-dialog .n-dialog__title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #fbfbfb;
+}
+
+.nil-dialog-scrollbar {
+  height: 60vh;
+  max-height: 60vh;
+}
+
+.title {
+  padding: 0.5em 0;
+  font-weight: bold;
+}
+.line {
+  padding: 0.3em 0;
+  width: 100%;
+}
+.flex-line {
+  display: flex;
+  align-items: center;
+}
+.noflex {
+  .n-form-item-blank {
+    display: block;
+  }
+}
+.ft .n-form-item-label__text {
+  font-weight: bold;
+}
+.ft .n-form-item-blank {
+  margin-left: 8px;
+}
+.mr8 {
+  margin-right: 8px;
+}
+.ml8 {
+  margin-left: 1em;
+}
+.header-options {
+  height: var(--header-height);
+  padding: 0 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+// 动画
+.zoom-fade-enter-active,
+.zoom-fade-leave-active {
+  transition: transform 0.35s, opacity 0.28s ease-in-out;
+}
+
+.zoom-fade-enter-from {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.zoom-fade-leave-to {
+  opacity: 0;
+  transform: scale(1.03);
+}
